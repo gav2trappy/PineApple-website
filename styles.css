@@ -15,21 +15,22 @@ body, html {
 nav ul {
     list-style-type: none;
     padding: 0;
+    padding-bottom: 0.4rem;
     background-color: #fff;
   }
   
 nav ul li a {
   color: #000;
   text-decoration: none;
-  padding: 0.8rem 1rem;
+  padding: 0.4rem 1rem;
   display: block;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1;
   border-radius: 10px;
 }
 
 nav ul li {
-  padding: 0 0.5rem;
+  padding: 0.2rem 1rem;
   text-align: center;
 }
 
@@ -39,13 +40,13 @@ nav div:first-child {
 
 nav div:first-child h1{
   line-height: 0;
-  padding: 1.2rem 0rem;
+  padding: 0.8rem 0rem;
   padding-bottom: 0.2rem;
   text-align: center;
 }
 
 nav div:first-child img{
-  height: 5rem;
+  height: 3rem;
 }
 
 nav div:first-child h1, nav ul {
@@ -144,7 +145,7 @@ nav ul li a:hover, .dropdown:hover .dropbtn {
   border: none;
   padding: 10px 10px;
   cursor: pointer;
-  transition: all 0.4s;
+  transition: transform 0.4s;
 }
 
 .promobutton span {
@@ -232,7 +233,8 @@ button a {
 
   .promobutton {
     font-size: 25px;
-    padding: 10px 20px;
+    padding: 12.5px 15px;
+    border-radius: 15px;
   }
 
   .promobutton span:after {
@@ -281,4 +283,42 @@ button a {
   .hero h1 {
     font-size: 50px;
   }
+}
+
+.pineapplepromo {
+  scale: 0.8;
+  opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry 10%;
+}
+
+@keyframes fade-in {
+  to { scale: 1.2; opacity: 1;}
+}
+
+.ceoimage {
+  scale: 0.3;
+  opacity: 0;
+  transform: translate(-40%, 0%);
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+@keyframes fade-in {
+  to { scale: 1; opacity: 1; transform: translate(0%, 0%);}
+}
+
+.missionstatement {
+  scale: 0.3;
+  opacity: 0;
+  transform: translate(70%, 0%);
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+@keyframes fade-in {
+  to { scale: 1; opacity: 1; transform: translate(0%, 0%);}
 }
